@@ -1,0 +1,68 @@
+
+# Windows image file caches
+
+Thumbs.db 
+
+# Folder config file
+
+Desktop.ini
+
+# Mercurial
+
+.hg
+.hgignore
+.hgsub
+.hgsubtate
+.hgtags
+
+# Visual Studio
+
+App_Data
+
+[Aa]rtefacts
+
+[Bb]in
+[Oo]bj
+
+*.cache
+*.meta
+*.obj
+*.orig
+*.patch
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.psess
+*.rsp
+*.sbr
+*.suo
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.user
+*.vsp
+*.vspscc
+
+*.Publish.xml
+
+# MSTest
+
+TestResults
+
+# NuGet
+
+[Pp]ackages
+
+# ReSharper
+
+*.ReSharper
+
+_ReSharper*
+
+# Orchard
+
+artifacts
+build
+buildtasks

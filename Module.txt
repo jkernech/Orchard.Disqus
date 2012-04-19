@@ -1,0 +1,18 @@
+Name: Orchard.Disqus
+AntiForgery: enabled
+Author: Microsoft DPE
+Website: http://disqusorchard.codeplex.com
+Version: 1.0
+OrchardVersion: 1.4.0
+Description: Integrates the Disqus commenting system into Orchard
+Features:
+    Orchard.Disqus:
+        Name: Disqus Comments
+        Description: Integrates the Disqus commenting system into Orchard
+        Dependencies: Orchard.Autoroute, Orchard.Comments
+        Category: Social
+    Orchard.Disqus.Rules:
+        Name: Disqus Rules
+        Description: Action that synchronizes comments from Disqus
+        Dependencies: Orchard.Disqus, Orchard.Rules
+        Category: Rules

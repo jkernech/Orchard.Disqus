@@ -1,0 +1,8 @@
+﻿@using Orchard.ContentManagement
+@{
+    var item = (ContentItem)Model.ContentPart.ContentItem;
+    var permalink = new Uri(HttpContext.Current.Request.Url, Url.ItemDisplayUrl(item)).AbsoluteUri;
+}
+
+<a href="@permalink#disqus_thread" data-disqus-identifier="@Model.DisqusUniqueId">@T("Comments")</a>
+

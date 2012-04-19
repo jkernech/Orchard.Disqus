@@ -1,0 +1,15 @@
+﻿@model Orchard.Disqus.Models.DisqusSettingsRecord
+
+<fieldset>
+    <legend>@T("Disqus")</legend>
+    <div>
+        @Html.LabelFor(x => x.ShortName, T("Short Name"))
+        @Html.EditorFor(m => m.ShortName)
+        @Html.ValidationMessageFor(m => m.ShortName)
+    </div>
+    <div>
+        @Html.LabelFor(x => x.ApiKey, T("Api Key"))
+        @Html.EditorFor(m => m.ApiKey) 
+        @Html.ValidationMessageFor(m => m.ApiKey)
+    </div>
+</fieldset>
