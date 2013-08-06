@@ -85,19 +85,16 @@ namespace Orchard.Disqus.Services
                 return false;
             }
 
-            var context = new CreateCommentContext
-            {
-                Author = post.Author.Name,
-                CommentText = post.Message,
-                CommentedOn = contentId,
-                Email = post.Author.Email,
-                SiteName = post.Author.Url,
-            };
+            var commentPart = _orchardServices.ContentManager.New<CommentPart>("Comment");
 
-            var commentPart = _commentService.CreateComment(context, false);
+            commentPart.Author = post.Author.Name;
+            commentPart.CommentText = post.Message;
+            commentPart.CommentedOn = contentId;
+            commentPart.Email = post.Author.Email;
+            commentPart.SiteName = post.Author.Url;
+            commentPart.CommentDateUtc = post.CreatedAt;
+            commentPart.Status = CommentStatus.Approved;
 
-            commentPart.Record.CommentDateUtc = post.CreatedAt;
-            commentPart.Record.Status = CommentStatus.Approved;
 
             var record = new DisqusPostMappingRecord { PostId = post.Id, ContentItemRecord = commentPart.ContentItem.Record };
 
