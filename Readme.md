@@ -14,4 +14,4 @@ Orchard module that allows you to easily replace the comment system in Orchard w
 
 ## Credits
 
-This project is a complete rewrite of the [Disqus module](http://disqusorchard.codeplex.com).
+This project is a derivated work of the [Disqus module](http://disqusorchard.codeplex.com).
