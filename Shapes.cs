@@ -17,7 +17,11 @@ namespace Orchard.Disqus
 
         public void Discover(ShapeTableBuilder builder)
         {
-            builder.Describe("Parts_Comments")
+            // After orchard v1.7 Parts_Comments doesnt seem to be used in the CommentsPartDriver in the comments Module. 
+            // As a result Disqus module is not replacing OOTB comments.
+            // Following can also be builder.Describe("Parts_ListOfComments") but not sure which one is better to use.
+            
+            builder.Describe("Parts_CommentForm")
                 .OnDisplaying(shapeDisplayingContext =>
                     AddShapeWrapper(shapeDisplayingContext, "Parts_Comments_Wrapper"));
 
