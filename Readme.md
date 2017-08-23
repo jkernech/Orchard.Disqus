@@ -2,6 +2,12 @@
 
 Orchard module that allows you to easily replace the comment system in Orchard with the Disqus comment system. 
 
+### Installation Instructions
+[Installation Instructions](install.md)
+
+### Requirements
+Orchard 1.4 or above
+
 ### Commands
 
 - **Import**: Command that imports the comments from Disqus.
